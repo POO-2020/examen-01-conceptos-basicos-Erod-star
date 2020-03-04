@@ -1,5 +1,6 @@
 import Reservacion from "./reservacion.js"
 import Huesped from "./huesped.js"
+import Hotel from "./hotel.js"
 
 export default class Main {
     constructor() { }
@@ -18,6 +19,7 @@ export default class Main {
         x1.addHuesped(h2);
         console.log(x1.getNumHuespedes());
         console.log(x1.print());
+        x1.listarHuespedes();
     }
 
     testHotel() {
@@ -27,9 +29,14 @@ export default class Main {
         let x2 = new Reservacion(12, new Date(2007, 2, 12), 3);
         x2.addHuesped(new Huesped('Juan Juanjo', 'Masculino'));
         x2.addHuesped(new Huesped('Jose Jose', 'Masculino'));
+
+        let z = new Hotel('hotel');
+        z.addReservaciones(x1);
+        z.addReservaciones(x2);
     }
 }
 
 let app = new Main();
 app.testHuesped();
 app.testReservacion();
+app.testHotel();

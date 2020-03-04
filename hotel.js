@@ -7,12 +7,14 @@ export default class Hotel {
         this.reservaciones = new Array();
     }
 
-    getNumeHuespedes() {
-        this.reservaciones
+    addReservaciones(reservacion) {
+        this.reservaciones.push(reservacion);
     }
 
-    getCostoReservaciones() {
-
+    getNumeHuespedes() {
+        this.reservaciones.forEach((reservacion, i) => {
+            console.log(`${i} ${reservacion}`);
+        });
     }
 
     print() {

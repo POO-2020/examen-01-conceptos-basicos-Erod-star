@@ -42,6 +42,6 @@ export default class Reservacion {
         return `Habitación: ${this.numeroHabitacion} \n
         Fecha de Llegada ${ this.getFechaFormatoCorte()} \n
         ${this.noches} nohces reservadas \n
-        ${this.listarHuespedes()}`
+        `
     }
 }
