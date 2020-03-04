@@ -21,6 +21,9 @@ export default class Hotel {
     }
 
     print() {
-
+        this.reservaciones.forEach((reservacion) => {
+            console.log(reservacion.print());
+            reservacion.listarHuespedes();
+        });
     }
 }

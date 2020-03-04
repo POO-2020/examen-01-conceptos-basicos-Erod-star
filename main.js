@@ -35,6 +35,8 @@ export default class Main {
         z.addReservaciones(x2);
         console.log(z.getNumeHuespedes());
 
+        console.log(z.print());
+
     }
 }
 
