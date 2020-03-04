@@ -33,6 +33,8 @@ export default class Main {
         let z = new Hotel('hotel');
         z.addReservaciones(x1);
         z.addReservaciones(x2);
+        console.log(z.getNumeHuespedes());
+
     }
 }
 

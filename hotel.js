@@ -12,9 +12,12 @@ export default class Hotel {
     }
 
     getNumeHuespedes() {
+        let x = 0;
         this.reservaciones.forEach((reservacion, i) => {
-            console.log(`${i} ${reservacion}`);
+            x = reservacion.getNumHuespedes() + x;
         });
+
+        return (x)
     }
 
     print() {
